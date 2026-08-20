@@ -1,0 +1,787 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #050816;
+    color: white;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ================= MENU ================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 22px 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(3, 8, 25, 0.65);
+
+    backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    z-index: 1000;
+}
+
+.logo-menu {
+    font-size: 25px;
+    font-weight: 800;
+
+    color: white;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #5ee7ff,
+        #7d7cff
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #dcecff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #5ee7ff;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 130px 20px 80px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #155bb4 0%,
+            #09224a 30%,
+            #050816 70%
+        );
+}
+
+.brilho {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    background: #2bbcff;
+
+    border-radius: 50%;
+
+    filter: blur(180px);
+
+    opacity: 0.15;
+}
+
+.logo-principal {
+    width: 280px;
+    max-width: 70%;
+
+    position: relative;
+
+    margin-bottom: 30px;
+
+    filter:
+        drop-shadow(
+            0 0 30px rgba(70,200,255,0.35)
+        );
+
+    animation:
+        aparecer 1.2s ease;
+}
+
+.pequeno-titulo {
+    color: #5ee7ff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 95px);
+
+    font-weight: 900;
+
+    letter-spacing: -3px;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #5ee7ff,
+        #7b7cff
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.frase {
+    max-width: 650px;
+
+    margin-top: 20px;
+    margin-bottom: 35px;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    color: #d6e7ff;
+}
+
+.botao {
+    padding: 15px 30px;
+
+    border-radius: 50px;
+
+    color: white;
+
+    font-weight: 700;
+
+    background:
+        linear-gradient(
+            90deg,
+            #168cff,
+            #5ee7ff
+        );
+
+    box-shadow:
+        0 10px 30px rgba(20,150,255,0.25);
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: translateY(-4px) scale(1.04);
+
+    box-shadow:
+        0 15px 40px rgba(40,190,255,0.45);
+}
+
+
+/* ================= SEÇÕES ================= */
+
+.secao {
+    padding: 120px 8%;
+
+    min-height: 70vh;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #050816,
+            #071126
+        );
+}
+
+.titulo-secao span {
+    color: #5ee7ff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+.titulo-secao h2 {
+    margin-top: 12px;
+
+    margin-bottom: 25px;
+
+    font-size: clamp(38px, 5vw, 60px);
+
+    background:
+        linear-gradient(
+            90deg,
+            white,
+            #5ee7ff
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.titulo-secao p {
+    max-width: 750px;
+
+    margin: auto;
+
+    color: #aebfd6;
+
+    line-height: 1.8;
+
+    font-size: 18px;
+}
+
+
+/* ================= SOBRE ================= */
+
+.texto-sobre {
+    max-width: 850px;
+
+    margin: 50px auto 0;
+
+    text-align: center;
+}
+
+.texto-sobre p {
+    color: #cbd8ea;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    margin-bottom: 22px;
+}
+
+.texto-sobre strong {
+    color: #5ee7ff;
+}
+
+.frase-destaque {
+    margin-top: 45px;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20,130,220,0.18),
+            rgba(100,80,255,0.12)
+        );
+
+    border: 1px solid rgba(94,231,255,0.2);
+}
+
+.frase-destaque span {
+    font-size: 32px;
+
+    font-weight: 800;
+
+    color: white;
+}
+
+.frase-destaque p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+
+/* ================= FUNDADORES ================= */
+
+.fundadores-secao {
+    background:
+        linear-gradient(
+            180deg,
+            #071126,
+            #050816
+        );
+}
+
+.fundadores-container {
+    margin-top: 55px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 45px;
+
+    flex-wrap: wrap;
+}
+
+.fundador-card {
+    width: 330px;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #101d35,
+            #071020
+        );
+
+    border: 1px solid rgba(94,231,255,0.15);
+
+    transition: 0.4s;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.25);
+}
+
+.fundador-card:hover {
+    transform: translateY(-12px);
+
+    border-color: rgba(94,231,255,0.7);
+
+    box-shadow:
+        0 25px 60px rgba(20,150,255,0.2);
+}
+
+.foto-container {
+    width: 100%;
+
+    height: 380px;
+
+    overflow: hidden;
+
+    background: #0a1325;
+}
+
+.foto-container img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.fundador-card:hover .foto-container img {
+    transform: scale(1.05);
+}
+
+.fundador-info {
+    padding: 28px;
+}
+
+.cargo {
+    color: #5ee7ff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.fundador-info h3 {
+    font-size: 28px;
+
+    margin: 10px 0;
+}
+
+.fundador-info p {
+    color: #aebfd6;
+
+    line-height: 1.6;
+}
+
+
+/* ================= EPISÓDIOS ================= */
+.capa-episodio {
+    width: 100%;
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #071020;
+}
+
+.capa-episodio img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 25px;
+    transition: 0.5s;
+}
+
+.episodio-card:hover .capa-episodio img {
+    transform: scale(1.08);
+}
+
+.capa-episodio .numero {
+    top: 5px;
+    right: 10px;
+    font-size: 80px;
+}
+
+.episodios {
+    background:
+        linear-gradient(
+            180deg,
+            #050816,
+            #091b37
+        );
+}
+
+.episodios-container {
+    margin-top: 55px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1100px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.episodio-card {
+    position: relative;
+
+    min-height: 320px;
+
+    padding: 30px;
+
+    text-align: left;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #10284b,
+            #071020
+        );
+
+    border: 1px solid rgba(94,231,255,0.15);
+
+    transition: 0.4s;
+}
+
+.episodio-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #5ee7ff;
+}
+
+.episodio-conteudo {
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 100px;
+}
+
+.episodio-conteudo span {
+    color: #5ee7ff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.episodio-conteudo h3 {
+    font-size: 28px;
+
+    margin: 10px 0;
+}
+
+.episodio-conteudo p {
+    color: #aebfd6;
+
+    margin-bottom: 25px;
+}
+
+.botao-episodio {
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border-radius: 30px;
+
+    background: #168cff;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.botao-episodio:hover {
+    background: #5ee7ff;
+
+    color: #06101f;
+}
+
+
+/* ================= CHAMADA ================= */
+
+.chamada {
+    min-height: 55vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #174f94,
+            #050816 65%
+        );
+}
+
+.chamada span {
+    color: #5ee7ff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+.chamada h2 {
+    margin: 20px 0;
+
+    font-size: clamp(35px, 5vw, 60px);
+
+    line-height: 1.15;
+}
+
+.chamada p {
+    color: #5ee7ff;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+
+/* ================= CONTATO ================= */
+
+.contato {
+    min-height: 55vh;
+}
+
+.redes {
+    margin-top: 45px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.rede {
+    padding: 15px 30px;
+
+    border-radius: 40px;
+
+    color: white;
+
+    border: 1px solid rgba(94,231,255,0.3);
+
+    transition: 0.3s;
+}
+
+.rede:hover {
+    background: #168cff;
+
+    border-color: #168cff;
+
+    transform: translateY(-4px);
+}
+
+
+/* ================= RODAPÉ ================= */
+
+footer {
+    padding: 45px 20px;
+
+    text-align: center;
+
+    background: #02040b;
+
+    color: #718096;
+
+    line-height: 2;
+}
+
+footer img {
+    width: 90px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ================= ANIMAÇÃO ================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* ================= CELULAR ================= */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .logo-menu {
+        font-size: 20px;
+    }
+
+    .logo-principal {
+        width: 220px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .frase {
+        font-size: 17px;
+    }
+
+    .episodios-container {
+        grid-template-columns: 1fr;
+    }
+
+    .fundador-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .foto-container {
+        height: 400px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    header {
+        position: absolute;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+        padding-top: 170px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .pequeno-titulo {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .secao {
+        padding: 90px 6%;
+    }
+
+    .foto-container {
+        height: 360px;
+    }
+}
